@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Daryll - Get In Touch</title>
+    <link rel="stylesheet" href="portpolio.css"> 
+    <style>
+        /* CSS specific to the Contact page to make it look full screen */
+        .contact-page-body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        #contact-main {
+            flex-grow: 1; 
+            padding-top: 150px; 
+            padding-bottom: 80px;
+            background: linear-gradient(
+                to top, 
+                rgba(29, 31, 35, 0.9), 
+                rgba(79, 139, 255, 0.2) 
+            );
+        }
+        @media (min-width: 769px) {
+            .contact-details {
+                border-right: 1px solid rgba(255, 255, 255, 0.1); 
+            }
+        }
+    </style>
+</head>
+<body class="contact-page-body">
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="portfolio.html" class="logo">Lolapalooza.</a> 
+                <ul>
+                    <li><a href="portfolio.html#about">About</a></li>
+                    <li><a href="achievements.html">Achievements</a></li> 
+                    <li><a href="portfolio.html#projects-full">Projects</a></li> 
+                    <li><a href="#" class="btn-primary contact-nav-btn" style="pointer-events: none;">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="contact-main" class="contact-section">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Get In Touch</h2>
+            <p class="contact-subtext">I am currently open to new opportunities. Let's build something great together!</p>
+            
+            <div class="contact-content">
+                
+                <div class="contact-details">
+                    <h3>Contact Info</h3>
+                    <p>📧 Email: <a href="mailto:daryllsanchez3@gmail.com">daryllsanchez3@gmail.com</a></p>
+                    <p>📞 Phone: +63 9xx xxxx xxx</p>
+                    <p>📍 Location: Metro Manila, Philippines</p>
+                    
+                    <div class="social-links">
+                        <a href="#" target="_blank">Facebook</a> |
+                        <a href="#" target="_blank">LinkedIn</a> |
+                        <a href="#" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+                
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Daryll's Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
