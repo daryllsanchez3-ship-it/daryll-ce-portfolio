@@ -1,0 +1,169 @@
+/* 1. VARIABLES */
+:root {
+    --primary: #4F8BFF;
+    --secondary: #FF7B54;
+    --bg-dark: #1d1f23;
+    --text: #ececec;
+    --text-muted: #aaa;
+    --card-bg: #25252b; /* Match sa About Me */
+}
+
+/* 2. RESET & BODY */
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text);
+    line-height: 1.7;
+    /* Background sync para sa buong page */
+    background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('../image/Aoi.jfif'); 
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.container { width: 90%; max-width: 1200px; margin: auto; }
+
+/* 3. HEADER & LOGO (Matched to Portfolio) */
+header {
+    width: 100%;
+    background-color: var(--dark-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+}
+
+nav .logo {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.contact-nav-btn {
+    padding: 10px 25px !important;
+}
+nav ul { display: flex; gap: 30px; list-style: none; align-items: center; }
+nav ul li a { text-decoration: none; color: var(--text); font-weight: 500; }
+
+.contact-nav-btn {
+    padding: 10px 25px;
+    border-radius: 30px;
+    color: var(--text) !important;
+}
+
+/* 4. CONTACT LAYOUT */
+.contact-section { padding: 80px 0; }
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+}
+
+.contact-left h2 { font-size: 4rem; font-weight: 800; margin-bottom: 10px; }
+.form-intro { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 30px; }
+
+/* 5. FORM STYLING */
+.contact-form { display: flex; flex-direction: column; gap: 20px; }
+.contact-form input, .contact-form textarea {
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: var(--card-bg);
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+.btn-send {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 14px 35px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    width: fit-content;
+}
+
+/* 6. INFO CARD (Matched to Quick Facts) */
+.contact-right-card {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.info-group { margin-bottom: 30px; }
+.info-group h3 {
+   .info-group h3 {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 700;
+
+    /* 1. Ilagay ang gradient (Coral to Blue base sa variables mo) */
+    background: linear-gradient(90deg, var(--secondary), var(--primary));
+
+    /* 2. I-clip ang background sa text */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* 3. Gawing transparent ang kulay ng font */
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    display: inline-block; /* Mahalaga para lumabas ang gradient sa bawat label */
+}
+}
+
+.social-links { display: flex; gap: 15px; margin-top: 10px; }
+.social-links a { color: var(--primary); text-decoration: none; font-weight: 600; }
+/* ------------------------------
+    FIXED FOOTER CENTER & TRANSPARENT
+------------------------------ */
+footer {
+    width: 100%;
+    padding: 20px 0;
+    background: transparent !important; /* Para mawala yung dark grid/solid color */
+    display: flex;
+    justify-content: center; /* Ito ang maglalagay sa gitna */
+    align-items: center;
+    position: relative; /* O 'fixed' kung gusto mong nakalutang */
+    bottom: 0;
+}
+
+/* Siguraduhin na ang text sa loob ay naka-center din */
+footer p, .footer-text {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    color: var(--text-muted); /* O kahit anong kulay na gusto mo */
+    font-size: 0.9rem;
+}

@@ -1,0 +1,222 @@
+/* Base Section Styling */
+
+.achievements {
+
+    background-color: #0b0b0b;
+
+    color: #fff;
+
+    padding: 80px 0;
+
+}
+
+
+
+.section-title {
+
+    font-size: 3.5rem;
+
+    font-weight: 800;
+
+    margin-bottom: 60px;
+
+}
+
+
+
+.section-title span {
+
+    color: #ff7468; /* Coral Accent */
+
+}
+
+
+
+/* List Container */
+
+.achievement-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 40px;
+
+}
+
+
+
+/* Row Styling: Text Left, Image Right */
+
+.achieve-item {
+
+    display: flex;
+
+    align-items: center;
+
+    background: #1a1a1a; /* Dark Card Background */
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    border-radius: 25px;
+
+    padding: 40px;
+
+    gap: 30px;
+
+    transition: 0.3s ease;
+
+}
+
+
+
+.achieve-item:hover {
+
+    border-color: #ececec;
+
+    transform: translateY(-5px);
+
+}
+
+
+
+/* Text Side */
+
+.achieve-content {
+
+    flex: 1.5; /* Mas malapad ang text side */
+
+}
+
+
+
+.category-tag {
+
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+
+
+    color: #fff;
+
+    padding: 5px 15px;
+
+    border-radius: 50px;
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+.achieve-content h2 {
+
+    font-size: 2rem;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+.achieve-content p {
+
+    color: #b3b3b3;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* Image Side */
+
+.achieve-img {
+
+    flex: 1; /* Image takes less space than text */
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+
+.achieve-img img {
+
+    width: 100%;
+
+    max-width: 350px;
+
+    height: 250px;
+
+    object-fit: cover; /* Auto-adjust ang image sa box */
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+
+}
+
+
+
+/* RESPONSIVE: Magiging stack (Top-Down) sa Mobile */
+
+@media (max-width: 768px) {
+
+    .achieve-item {
+
+        flex-direction: column-reverse; /* Image sa taas, Text sa baba sa mobile */
+
+        text-align: center;
+
+        padding: 30px;
+
+    }
+
+
+
+    .section-title {
+
+        font-size: 2.5rem;
+
+        text-align: center;
+
+    }
+
+
+
+    .achieve-img img {
+
+        height: 200px;
+
+    }
+
+}
+/* ------------------------------
+    FIXED FOOTER CENTER & TRANSPARENT
+------------------------------ */
+footer {
+    width: 100%;
+    padding: 20px 0;
+    background: transparent !important; /* Para mawala yung dark grid/solid color */
+    display: flex;
+    justify-content: center; /* Ito ang maglalagay sa gitna */
+    align-items: center;
+    position: relative; /* O 'fixed' kung gusto mong nakalutang */
+    bottom: 0;
+}
+
+/* Siguraduhin na ang text sa loob ay naka-center din */
+footer p, .footer-text {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    color: var(--text-muted); /* O kahit anong kulay na gusto mo */
+    font-size: 0.9rem;
+}

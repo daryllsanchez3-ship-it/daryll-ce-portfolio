@@ -1,0 +1,231 @@
+/* 1. IMPORT FONT DIRECTLY */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ------------------------------
+    GLOBAL VARIABLES & RESET
+------------------------------ */
+:root {
+    --primary-color: #4F8BFF;   /* Blue */
+    --secondary-color: #FF6F61; /* Coral/Orange */
+    --dark-color: #000000;      /* Solid Dark Background */
+    --light-color: #ffffff;
+    --text-color: #ffffff;      /* GINAWANG PURE WHITE */
+    --font-main: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* FORCE FONT ON ALL ELEMENTS */
+    font-family: var(--font-main) !important;
+}
+
+body {
+    background-color: var(--dark-color);
+    color: var(--text-color); /* Lahat ng body text ay Pure White */
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ------------------------------
+    1. NAVIGATION
+------------------------------ */
+header {
+    width: 100%;
+    background-color: var(--dark-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+}
+
+nav .logo {
+    font-size: 2.5rem;
+    font-weight: 800;
+    /* GINAWANG PURE WHITE AT MAY SHADOW */
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important; 
+    text-decoration: none;
+    background: none; 
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #ffffff; 
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.contact-nav-btn {
+    padding: 10px 25px !important;
+
+    border-radius: 30px !important;
+    font-weight: 600;
+    color: #ffffff !important;
+}
+
+.contact-nav-btn:hover {
+    background-color: var(--secondary-color) !important;
+    color: white !important;
+}
+
+/* ------------------------------
+    2. HERO SECTION
+------------------------------ */
+.hero-section {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.hero-content h1 {
+    font-size: 6.5rem; 
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0;
+    /* GINAWANG PURE WHITE ANG "HELLO I'M DARYLL" */
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    background: none !important; 
+    /* Nilagyan ng shadow para mas premium tignan ang puti */
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6);
+}
+
+.hero-content p {
+    font-size: 1.35rem;
+    margin-top: 25px;
+    max-width: 700px;
+    color: #ffffff; /* Pure White body text */
+}
+
+/* Highlighted keywords sa paragraph (Colored pa rin para may accent) */
+.hero-content p strong {
+    color: var(--text-color);
+}
+
+.cta-group {
+    margin-top: 45px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* BUTTON */
+.cta-button {
+   padding: 16px 35px;
+    background: #2e2e35; /* Dark gray/normal color */
+    color: white;
+    border-radius: 35px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid #444; /* Optional: para may outline siya */
+    transition: all 0.4s ease; /* Para smooth ang paglabas ng gradient */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-color: transparent; /* Tanggalin ang border para malinis ang gradient */
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(79, 139, 255, 0.4); /* Glow effect */
+}
+.contact-link {
+    font-weight: 500;
+    text-decoration: underline;
+    color: #ffffff; /* Pure White email link */
+    transition: 0.3s;
+}
+
+.contact-link:hover {
+    color: var(none);
+}
+
+/* ------------------------------
+    FOOTER & ANIMATION
+------------------------------ */
+footer {
+    padding: 50px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #ffffff; /* Pure White footer text */
+}
+/* ------------------------------
+    GLOBAL BUTTONS (Unified Effects)
+------------------------------ */
+
+/* Idagdag mo dito lahat ng class names ng buttons mo na gusto mong maging pareho */
+.cta-button, 
+.btn-connect, 
+.btn-send, 
+.btn-primary,
+.btn-download,
+.btn-linkedin {
+    display: inline-block; /* Siguradong pantay ang padding */
+    padding: 16px 35px;
+    background: #2e2e35; /* Normal State: Dark Gray */
+    color: #ffffff !important;
+    border-radius: 35px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid #444;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Mas swabe na animation */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    text-align: center;
+}
+
+/* HOVER EFFECT - Gradient and Glow para sa lahat */
+.cta-button:hover, 
+.btn-connect:hover, 
+.btn-send:hover, 
+.btn-primary:hover,
+.btn-download:hover,
+.btn-linkedin:hover {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)) !important;
+    border-color: transparent;
+    color: #ffffff !important;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(79, 139, 255, 0.4); /* Glow effect */
+}
+
+/* ACTIVE EFFECT - Pag clinick ang button */
+.cta-button:active, 
+.btn-connect:active, 
+.btn-send:active {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(79, 139, 255, 0.3);
+}

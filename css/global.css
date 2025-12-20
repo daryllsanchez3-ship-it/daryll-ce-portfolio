@@ -1,0 +1,183 @@
+/* 1. IMPORT FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ------------------------------
+    GLOBAL VARIABLES & RESET
+------------------------------ */
+:root {
+    --primary-color: #4F8BFF;   /* Blue */
+    --secondary-color: #FF6F61; /* Coral/Orange */
+    --dark-color: #1d1f23;      
+    --light-color: #ffffff;
+    --text-color: #ececec;      /* Standardized Text Color */
+    --font-main: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: var(--font-main) !important;
+}
+
+body {
+    background-color: var(--dark-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    
+    /* BACKGROUND SETTINGS */
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../image/legit.jpg'); 
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+    /* Sticky Footer Setup */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+/* ------------------------------
+    LAYOUT WRAPPER
+------------------------------ */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+main, .content-wrapper {
+    flex: 1; /* Hinihila nito ang footer pababa */
+}
+
+/* ------------------------------
+    NAVIGATION
+------------------------------ */
+header {
+    width: 100%;
+    background-color: transparent; 
+    position: relative;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 5%;
+}
+
+nav .logo {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-decoration: none;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important; 
+    display: inline-block;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.contact-nav-btn {
+    padding: 10px 25px !important;
+    border-radius: 30px !important;
+    font-weight: 600;
+    color: var(--text-color) !important;
+    transition: 0.3s;
+}
+
+/* ------------------------------
+    ACHIEVEMENTS GRID SYSTEM
+------------------------------ */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.achievement-card {
+    background: rgba(37, 37, 43, 0.8); 
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* ------------------------------
+    FOOTER (NEWLY ADDED & CENTERED)
+------------------------------ */
+footer {
+    width: 100%;
+    padding: 30px 0;
+    background: transparent; /* Transparent para makita ang bg image */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: auto; /* Siguradong nasa dulo ng page */
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: rgba(236, 236, 236, 0.6); /* Slightly muted text */
+    text-align: center;
+    letter-spacing: 1px;
+}
+/* ------------------------------
+    GLOBAL BUTTONS (Unified Effects)
+------------------------------ */
+
+/* Pagsamahin lahat ng button classes pati yung nasa header */
+.cta-button, 
+.btn-connect, 
+.btn-send, 
+.btn-primary,
+.btn-download,
+.btn-linkedin,
+.contact-nav-btn {
+    display: inline-block;
+    padding: 12px 28px; /* Tamang size para sa nav at body */
+    color: #ffffff !important;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    text-align: center;
+}
+
+/* HOVER EFFECT - Pati yung sa header mag-gragradient na */
+.cta-button:hover, 
+.btn-connect:hover, 
+.btn-send:hover, 
+.btn-primary:hover,
+.btn-download:hover,
+.btn-linkedin:hover,
+.contact-nav-btn:hover {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)) !important;
+    color: #ffffff !important;
+    transform: translateY(-3px); /* Konting angat lang para sa nav */
+    box-shadow: 0 10px 25px rgba(79, 139, 255, 0.4);
+}

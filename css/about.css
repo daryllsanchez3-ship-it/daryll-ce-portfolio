@@ -1,0 +1,295 @@
+/* 1. IMPORT FONT DIRECTLY */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ------------------------------
+    GLOBAL VARIABLES & RESET
+------------------------------ */
+:root {
+    --primary-color: #4F8BFF;   
+    --secondary-color: #FF6F61; 
+    --dark-color: #1d1f23;      
+    --light-color: #ffffff;
+    --text-color: #ececec;      
+    --font-main: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* Eto ang pampasama ng font sa lahat */
+    font-family: var(--font-main) !important;
+}
+
+body {
+    background-color: var(--dark-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ------------------------------
+    1. NAVIGATION (Consistent with Home)
+------------------------------ */
+header {
+    width: 100%;
+    background-color: var(--dark-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+}
+
+nav .logo {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.contact-nav-btn {
+    padding: 10px 25px !important;
+    border-radius: 30px !important;
+}
+
+/* ------------------------------
+    2. ABOUT SECTION LAYOUT
+------------------------------ */
+.about-section {
+    padding: 80px 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+
+}
+
+.about-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.about-left { flex: 2.5; }
+.about-center { flex: 1.5; }
+.about-right { flex: 2; }
+
+/* Titles */
+.about-left h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+
+
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.intro {
+    font-size: 1.1rem;
+    color: #b3b3b3;
+    margin-bottom: 30px;
+}
+
+/* 3. SKILLS GRID (The 4 Boxes) */
+.skills-grid {
+    display: flex;
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.skill-box {
+    flex: 1;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 20px 10px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.skill-box i {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.skill-box span {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #aaa;
+}
+
+/* Tech Circles */
+.tech-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.icon-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #25252b;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #888;
+}
+
+/* 4. QUICK FACTS CARD */
+.quick-facts-card {
+    background: #25252b;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    border: 1px solid #333;
+}
+
+.quick-facts-card h3 {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.quick-facts-card ul {
+    list-style: none;
+}
+
+.quick-facts-card li {
+    font-size: 0.95rem;
+    color: #bbb;
+    margin-bottom: 12px;
+}
+
+/* 5. SIDEBAR BUTTONS */
+.action-area {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-connect{
+    padding: 16px 35px;
+    background: #2e2e35; /* Dark gray/normal color */
+    color: white;
+    border-radius: 35px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid #444; /* Optional: para may outline siya */
+    transition: all 0.4s ease; /* Para smooth ang paglabas ng gradient */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-connect:hover {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-color: transparent; /* Tanggalin ang border para malinis ang gradient */
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(79, 139, 255, 0.4); /* Glow effect */
+}
+
+.btn-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #2e2e35;
+    color: white;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #444;
+    text-decoration: none;
+}
+
+.btn-linkedin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #2e2e35;
+    color: white;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #444;
+    text-decoration: none;
+}
+
+/* HOVER FOR DOWNLOAD & LINKEDIN */
+.btn-download:hover, 
+.btn-linkedin:hover {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-color: transparent; /* Tanggalin ang border para malinis ang gradient */
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(79, 139, 255, 0.4); /* Glow effect */
+}
+
+/* 6. PHOTO STYLING */
+.main-photo {
+    width: 100%;
+    border-radius: 15px;
+    filter: grayscale(20%);
+    transition: 0.5s;
+}
+
+.main-photo:hover {
+    filter: grayscale(0%);
+}
+/* ------------------------------
+    FIXED FOOTER CENTER & TRANSPARENT
+------------------------------ */
+footer {
+    width: 100%;
+    padding: 20px 0;
+    background: transparent !important; /* Para mawala yung dark grid/solid color */
+    display: flex;
+    justify-content: center; /* Ito ang maglalagay sa gitna */
+    align-items: center;
+    position: relative; /* O 'fixed' kung gusto mong nakalutang */
+    bottom: 0;
+}
+
+/* Siguraduhin na ang text sa loob ay naka-center din */
+footer p, .footer-text {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    color: var(--text-muted); /* O kahit anong kulay na gusto mo */
+    font-size: 0.9rem;
+}
+
+ 
